@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicativo do Rateio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Aplicativo do Rateio</h1>
+
+        <div class="form-section">
+            <h2>Adicionar Pessoa</h2>
+            <input type="text" id="nomePessoa" placeholder="Nome da Pessoa">
+            <input type="text" id="numeroPessoa" placeholder="Número de Telefone (com DDD)">
+            <button onclick="adicionarPessoa()">Adicionar</button>
+        </div>
+
+        <div class="form-section">
+            <h2>Adicionar Despesa</h2>
+            <input type="text" id="nomeDespesa" placeholder="Nome da Despesa">
+            <input type="number" id="valorDespesa" placeholder="Valor da Despesa">
+            <button onclick="adicionarDespesa()">Adicionar</button>
+        </div>
+
+        <h2>Pessoas</h2>
+        <ul id="listaPessoas"></ul>
+
+        <h2>Despesas</h2>
+        <ul id="listaDespesas"></ul>
+
+        <button class="action-button" onclick="calcularRateio()">Calcular Rateio</button>
+
+        <h2>Resultado</h2>
+        <div id="resultado"></div>
+        <button class="action-button" onclick="gerarPDF()">Gerar PDF</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
