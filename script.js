@@ -77,6 +77,16 @@ function enviarWhatsApp(pessoa) {
     const totalDespesas = despesas.reduce((total, despesa) => total + despesa.valor, 0);
     const valorPorPessoa = totalDespesas / pessoas.length;
     const mensagem = `Olá ${pessoa.nome},\n\nTotal de Despesas: R$ ${totalDespesas.toFixed(2)}\nValor a Pagar: R$ ${valorPorPessoa.toFixed(2)}`;
-    const url = `https://api.whatsapp.com/send?phone=${pessoa.numero}&text=${encodeURIComponent(mensagem)}`;
+    const url = `https://api.whatsapp.com/send?phone=${pessoa.numero.replace(/\D/g, '')}&text=${encodeURIComponent(mensagem)}`;
     window.open(url, '_blank');
+}
+
+function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+}
+
+function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
 }

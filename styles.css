@@ -1,16 +1,21 @@
+/* Estilos padrão (Modo Claro) */
 body {
-    background-color: black;
-    color: white;
+    background-color: white; /* Cor de fundo do modo claro */
+    color: black; /* Cor do texto do modo claro */
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 600px; /* Limita a largura máxima para telas grandes */
     margin: auto;
     padding: 20px;
     border: 2px solid #8A2BE2; 
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+    background-color: #f9f9f9; /* Fundo claro para o container */
 }
 
 h1, h2 {
@@ -21,13 +26,18 @@ h1, h2 {
     margin-bottom: 20px;
 }
 
+.input-group {
+    display: flex;
+    flex-direction: column; /* Alinha os inputs verticalmente */
+}
+
 input {
-    margin-right: 10px;
+    margin-bottom: 10px; /* Espaço entre os inputs */
     padding: 10px;
     border: 1px solid #8A2BE2; 
     border-radius: 5px;
-    background-color: #222; 
-    color: white;
+    background-color: #f0f0f0; /* Fundo claro para inputs */
+    color: black; /* Texto escuro para inputs */
 }
 
 button {
@@ -37,11 +47,16 @@ button {
     border-radius: 5px;
     color: white;
     cursor: pointer;
-    margin-left: 10px; 
+    margin-top: 10px; /* Espaço acima do botão */
 }
 
 button:hover {
     background-color: #7A1DBE; 
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between; /* Espaça os botões */
 }
 
 ul {
@@ -54,5 +69,55 @@ li {
     padding: 10px;
     border: 1px solid #8A2BE2; 
     border-radius: 5px;
-    background-color: #333; 
+    background-color: #f9f9f9; /* Fundo claro para itens da lista */
+}
+
+/* Estilos para o Modo Escuro */
+.dark-mode {
+    background-color: black; /* Cor de fundo do modo escuro */
+    color: white; /* Cor do texto do modo escuro */
+}
+
+.dark-mode .container {
+    background-color: #222; /* Fundo escuro para o container */
+}
+
+.dark-mode input {
+    background-color: #333; /* Fundo escuro para inputs */
+    color: white; /* Texto claro para inputs */
+}
+
+.dark-mode button {
+    background-color: #8A2BE2; 
+}
+
+.dark-mode button:hover {
+    background-color: #7A1DBE; 
+}
+
+.dark-mode li {
+    background-color: #444; /* Fundo escuro para itens da lista */
+}
+
+.resultado-card {
+    padding: 15px;
+    border: 1px solid #8A2BE2; 
+    border-radius: 5px;
+    background-color: #f0f0f0; /* Fundo claro para o card de resultado */
+    margin-top: 20px; /* Espaço acima do card */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .input-group {
+        flex-direction: column; /* Alinha os inputs verticalmente em telas pequenas */
+    }
+
+    .button-group {
+        flex-direction: column; /* Alinha os botões verticalmente em telas pequenas */
+    }
+
+    .button-group button {
+        margin-top: 10px; /* Espaço entre os botões */
+    }
 }

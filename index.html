@@ -3,40 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplicativo do Rateio</title>
+    <title>Aplicativo de Rateio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Aplicativo do Rateio</h1>
-
+        <button class="toggle-button" onclick="toggleDarkMode()">🌙 Modo Escuro / Claro</button>
+        <h1>Aplicativo de Rateio</h1>
+        
         <div class="form-section">
             <h2>Adicionar Pessoa</h2>
-            <input type="text" id="nomePessoa" placeholder="Nome da Pessoa">
-            <input type="text" id="numeroPessoa" placeholder="Número de Telefone (com DDD)">
-            <button onclick="adicionarPessoa()">Adicionar</button>
+            <div class="input-group">
+                <input type="text" id="nomePessoa" placeholder="Nome">
+                <input type="text" id="numeroPessoa" placeholder="Número (com DDD)">
+                <button onclick="adicionarPessoa()">Adicionar</button>
+            </div>
         </div>
 
         <div class="form-section">
             <h2>Adicionar Despesa</h2>
-            <input type="text" id="nomeDespesa" placeholder="Nome da Despesa">
-            <input type="number" id="valorDespesa" placeholder="Valor da Despesa">
-            <button onclick="adicionarDespesa()">Adicionar</button>
+            <div class="input-group">
+                <input type="text" id="nomeDespesa" placeholder="Nome da Despesa">
+                <input type="number" id="valorDespesa" placeholder="Valor">
+                <button onclick="adicionarDespesa()">Adicionar</button>
+            </div>
         </div>
 
-        <h2>Pessoas</h2>
+        <div class="button-group">
+            <button onclick="calcularRateio()">Calcular Rateio</button>
+            <button onclick="gerarPDF()">Gerar PDF</button>
+        </div>
+
+        <div id="resultado" class="resultado-card"></div>
         <ul id="listaPessoas"></ul>
-
-        <h2>Despesas</h2>
         <ul id="listaDespesas"></ul>
-
-        <button class="action-button" onclick="calcularRateio()">Calcular Rateio</button>
-
-        <h2>Resultado</h2>
-        <div id="resultado"></div>
-        <button class="action-button" onclick="gerarPDF()">Gerar PDF</button>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
