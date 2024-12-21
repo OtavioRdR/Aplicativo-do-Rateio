@@ -1,44 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplicativo de Rateio</title>
+    <title>Rateio de Despesas</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <button class="toggle-button" onclick="toggleDarkMode()">🌙 Modo Escuro / Claro</button>
-        <h1>Aplicativo de Rateio</h1>
-        
+        <div class="mode-toggle">
+            <button onclick="alternarModo()">Alternar Modo ☀️|🌙</button>
+        </div>
+
+        <h1>Rateio de Despesas</h1>
+
         <div class="form-section">
             <h2>Adicionar Pessoa</h2>
             <div class="input-group">
                 <input type="text" id="nomePessoa" placeholder="Nome" required>
+                <span id="nomePessoaErro" class="erro"></span>
                 <input type="text" id="numeroPessoa" placeholder="Número (opcional)">
                 <input type="number" id="diasFicados" placeholder="Dias Ficados" required>
+                <span id="diasFicadosErro" class="erro"></span>
                 <button onclick="adicionarPessoa()">Adicionar</button>
             </div>
         </div>
+
+        <h2>Pessoas</h2>
+        <ul id="listaPessoas"></ul>
 
         <div class="form-section">
             <h2>Adicionar Despesa</h2>
             <div class="input-group">
                 <input type="text" id="nomeDespesa" placeholder="Nome da Despesa" required>
                 <input type="number" id="valorDespesa" placeholder="Valor" required>
+                <select id="categoriaDespesa">
+                    <option value="Alimentação">Alimentação</option>
+                    <option value="Hospedagem">Hospedagem</option>
+                    <option value="Transporte">Transporte</option>
+                </select>
                 <button onclick="adicionarDespesa()">Adicionar</button>
             </div>
         </div>
 
-        <div class="button-group">
-            <button onclick="calcularRateio()">Calcular Rateio</button>
-            <button onclick="gerarPDF()">Gerar PDF</button>
-        </div>
+        <h2>Despesas</h2>
+        <ul id="listaDespesas"></ul>
 
         <div id="resultado" class="resultado-card"></div>
-        <ul id="listaPessoas"></ul>
-        <ul id="listaDespesas"></ul>
+
+        <div class="button-group">
+            <button onclick="calcularRateio()">Calcular Rateio</button>
+            <button onclick="exportarParaCSV()">Exportar CSV</button>
+            <button onclick="exportarParaPDF()">Exportar PDF</button>
+        </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

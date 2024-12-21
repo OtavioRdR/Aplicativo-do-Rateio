@@ -11,14 +11,14 @@ body {
     max-width: 600px;
     margin: auto;
     padding: 20px;
-    border: 2px solid #8A2BE2; 
+    border: 2px solid #8A2BE2;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
     background-color: #f9f9f9;
 }
 
 h1, h2 {
-    color: #8A2BE2; 
+    color: #8A2BE2;
 }
 
 .form-section {
@@ -33,7 +33,7 @@ h1, h2 {
 input {
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #8A2BE2; 
+    border: 1px solid #8A2BE2;
     border-radius: 5px;
     background-color: #f0f0f0;
     color: black;
@@ -41,7 +41,7 @@ input {
 
 button {
     padding: 10px 15px;
-    background-color: #8A2BE2; 
+    background-color: #8A2BE2;
     border: none;
     border-radius: 5px;
     color: white;
@@ -50,7 +50,7 @@ button {
 }
 
 button:hover {
-    background-color: #7A1DBE; 
+    background-color: #7A1DBE;
 }
 
 .button-group {
@@ -66,7 +66,7 @@ ul {
 li {
     margin: 10px 0;
     padding: 10px;
-    border: 1px solid #8A2BE2; 
+    border: 1px solid #8A2BE2;
     border-radius: 5px;
     background-color: #f9f9f9;
 }
@@ -86,11 +86,11 @@ li {
 }
 
 .dark-mode button {
-    background-color: #8A2BE2; 
+    background-color: #8A2BE2;
 }
 
 .dark-mode button:hover {
-    background-color: #7A1DBE; 
+    background-color: #7A1DBE;
 }
 
 .dark-mode li {
@@ -99,7 +99,7 @@ li {
 
 .resultado-card {
     padding: 15px;
-    border: 1px solid #8A2BE2; 
+    border: 1px solid #8A2BE2;
     border-radius: 5px;
     background-color: #f0f0f0;
     margin-top: 20px;
